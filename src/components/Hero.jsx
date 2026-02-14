@@ -12,6 +12,9 @@ const Hero = () => {
                         src="/images/hero_section.webp"
                         alt="Background"
                         className="w-full h-full object-cover object-right opacity-40 lg:opacity-100"
+                        fetchPriority="high"
+                        width="1920"
+                        height="1080"
                     />
                 </div>
 
@@ -24,7 +27,7 @@ const Hero = () => {
                         </h1>
 
                         {/* Description */}
-                        <p className="text-gray-300 font-bold text-sm md:text-base uppercase tracking-[0.15em] leading-relaxed max-w-lg mb-12 border-l-4 border-[#D71921] pl-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
+                        <p className="text-gray-200 font-bold text-sm md:text-base uppercase tracking-[0.15em] leading-relaxed max-w-lg mb-12 border-l-4 border-[#D71921] pl-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
                             Step into the future of television with ultra-high-definition IPTV streaming in Dubai, which contains 55,000 live channels, 100,000+ movies & series — all on one powerful IPTV subscription.
                             From international news and live sports to movies and exclusive shows, enjoy stunning picture quality and uninterrupted viewing tailored to your lifestyle. Ready for your Smart TV and every device.
                         </p>
@@ -84,11 +87,11 @@ const Hero = () => {
                     <div className="flex flex-col items-center group cursor-pointer transition-transform duration-300 hover:scale-105">
                         <div className="relative mb-8">
                             <div className="w-24 h-24 bg-white rotate-45 shadow-sm flex items-center justify-center border border-gray-100 overflow-hidden transition-all duration-300">
-                                <img src="/images/first_icon.webp" alt="Premium Channels" className="-rotate-45 w-full h-full object-cover scale-[2.0]" />
+                                <img src="/images/first_icon.webp" alt="Premium Channels" className="-rotate-45 w-full h-full object-cover scale-[2.0]" width="96" height="96" />
                             </div>
                         </div>
-                        <h3 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">Global Channels</h3>
-                        <p className="text-gray-500 text-sm leading-relaxed max-w-[280px]">
+                        <h2 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">Global Channels</h2>
+                        <p className="text-gray-700 text-sm leading-relaxed max-w-[280px]">
                             Thousands of live Arabic, Indian, UK & USA channels with premium sports — all in one powerful IPTV Dubai plan.
                         </p>
                     </div>
@@ -97,11 +100,11 @@ const Hero = () => {
                     <div className="flex flex-col items-center group cursor-pointer transition-transform duration-300 hover:scale-105">
                         <div className="relative mb-8">
                             <div className="w-24 h-24 bg-white rotate-45 shadow-sm flex items-center justify-center border border-gray-100 overflow-hidden transition-all duration-300">
-                                <img src="/images/third_icon.webp" alt="100% Satisfaction" className="-rotate-45 w-full h-full object-cover scale-[1.5]" />
+                                <img src="/images/third_icon.webp" alt="100% Satisfaction" className="-rotate-45 w-full h-full object-cover scale-[1.5]" width="96" height="96" />
                             </div>
                         </div>
-                        <h3 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">Flexible Plans</h3>
-                        <p className="text-gray-500 text-sm leading-relaxed max-w-[280px]">
+                        <h2 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">Flexible Plans</h2>
+                        <p className="text-gray-700 text-sm leading-relaxed max-w-[280px]">
                             Monthly and yearly IPTV Dubai subscriptions designed for every budget.
                         </p>
                     </div>
@@ -109,11 +112,11 @@ const Hero = () => {
                     <div className="flex flex-col items-center group cursor-pointer transition-transform duration-300 hover:scale-105">
                         <div className="relative mb-8">
                             <div className="w-24 h-24 bg-white rotate-45 shadow-sm flex items-center justify-center border border-gray-100 overflow-hidden transition-all duration-300">
-                                <img src="/images/fourth_icon.webp" alt="24/7 Support" className="-rotate-45 w-full h-full object-cover scale-[1.5]" />
+                                <img src="/images/fourth_icon.webp" alt="24/7 Support" className="-rotate-45 w-full h-full object-cover scale-[1.5]" width="96" height="96" />
                             </div>
                         </div>
-                        <h3 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">24/7 Support</h3>
-                        <p className="text-gray-500 text-sm leading-relaxed max-w-[280px]">
+                        <h2 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">24/7 Support</h2>
+                        <p className="text-gray-700 text-sm leading-relaxed max-w-[280px]">
                             Quick activation on all devices with reliable customer support across the UAE.
                         </p>
                     </div>
@@ -122,11 +125,11 @@ const Hero = () => {
                     <div className="flex flex-col items-center group cursor-pointer transition-transform duration-300 hover:scale-105">
                         <div className="relative mb-8">
                             <div className="w-24 h-24 bg-white rotate-45 shadow-sm flex items-center justify-center border border-gray-100 overflow-hidden transition-all duration-300">
-                                <img src="/images/second_icon.webp" alt="4K Quality" className="-rotate-45 w-full h-full object-cover scale-[1.5]" />
+                                <img src="/images/second_icon.webp" alt="4K Quality" className="-rotate-45 w-full h-full object-cover scale-[1.5]" width="96" height="96" />
                             </div>
                         </div>
-                        <h3 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">4K/8K Ultra</h3>
-                        <p className="text-gray-500 text-sm leading-relaxed max-w-[280px]">
+                        <h2 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">4K/8K Ultra</h2>
+                        <p className="text-gray-700 text-sm leading-relaxed max-w-[280px]">
                             Enjoy smooth HD, FHD & 4K IPTV in Dubai with stable servers and zero buffering.
                         </p>
                     </div>

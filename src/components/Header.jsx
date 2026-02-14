@@ -27,7 +27,7 @@ const Header = () => {
             {/* Main Navigation - Navy */}
             <div className="bg-[#002613] text-white py-4 px-6 md:px-12 flex justify-between items-center shadow-xl">
                 <a href="/" className="flex items-center gap-2">
-                    <img src="/images/main_logo.webp" alt="Dubai TV 4K Logo" className="h-10 w-10 md:h-14 md:w-14 rounded-full object-cover" />
+                    <img src="/images/main_logo.webp" alt="Dubai TV 4K Logo" className="h-10 w-10 md:h-14 md:w-14 rounded-full object-cover" width="56" height="56" />
                 </a>
 
                 <nav className="hidden lg:flex items-center gap-8 text-[13px] font-black uppercase tracking-widest font-heading">

@@ -15,6 +15,9 @@ const Footer = () => {
                                     src="/images/main_logo.webp"
                                     alt="Dubai TV 4K"
                                     className="w-full h-full object-cover"
+                                    width="80"
+                                    height="80"
+                                    loading="lazy"
                                 />
                             </div>
                             <div className="flex flex-col">
@@ -58,7 +61,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-xs font-medium text-gray-400">
                     <div className="text-center md:text-left">
-                        COPYRIGHT © 2024 <span className="text-white font-bold">DUBAITV4K</span> ALL RIGHTS RESERVED | DESIGNED BY <span className="text-[#D71921] font-bold">WEBDONO</span>
+                        COPYRIGHT © 2024 <span className="text-white font-bold">DUBAITV4K</span> ALL RIGHTS RESERVED | DESIGNED BY <span className="text-[#ff4d5a] font-bold">WEBDONO</span>
                     </div>
 
                     <a href="mailto:support@iptvdubai.fun" className="flex items-center gap-3 hover:text-white transition-colors group">

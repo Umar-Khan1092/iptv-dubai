@@ -30,6 +30,8 @@ const MovieSlider = () => {
                                 alt={`Movie poster ${index + 1}`}
                                 className="h-48 md:h-64 lg:h-[400px] w-auto object-cover transform transition-transform duration-700 hover:scale-110"
                                 loading="lazy"
+                                width="1200"
+                                height="400"
                             />
                             {/* Subtle overlay for each poster */}
                             <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors duration-300"></div>

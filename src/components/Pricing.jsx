@@ -217,9 +217,9 @@ const Pricing = () => {
                 <div className="container mx-auto max-w-7xl">
                     {/* Section Header */}
                     <div className="text-center mb-16">
-                        <h4 className="text-[#D71921] font-black text-sm uppercase tracking-[0.3em] mb-4 font-heading">
+                        <h2 className="text-[#D71921] font-black text-sm uppercase tracking-[0.3em] mb-4 font-heading">
                             Why Choose Us?
-                        </h4>
+                        </h2>
                         <h2 className="text-4xl md:text-5xl font-black text-[#001540] font-heading tracking-tight">
                             3 Causes To Buy iptvdbai.fun
                         </h2>
@@ -238,6 +238,9 @@ const Pricing = () => {
                                         src={reason.icon}
                                         alt={reason.title}
                                         className="w-32 h-32 md:w-36 md:h-36 object-contain"
+                                        width="144"
+                                        height="144"
+                                        loading="lazy"
                                     />
                                 </div>
 
@@ -247,7 +250,7 @@ const Pricing = () => {
                                 </h3>
 
                                 {/* Description */}
-                                <p className="text-gray-600 text-sm leading-relaxed max-w-[350px]">
+                                <p className="text-gray-700 text-sm leading-relaxed max-w-[350px]">
                                     {reason.description}
                                 </p>
                             </div>
@@ -266,6 +269,9 @@ const Pricing = () => {
                                 src="/images/TV.webp"
                                 alt="DubaiTV4K IPTV Premium"
                                 className="w-full max-w-md rounded-lg shadow-xl"
+                                width="448"
+                                height="448"
+                                loading="lazy"
                             />
                         </div>
 
@@ -277,7 +283,7 @@ const Pricing = () => {
                             </h2>
 
                             {/* Description */}
-                            <p className="text-gray-600 text-sm leading-relaxed">
+                            <p className="text-gray-700 text-sm leading-relaxed">
                                 DubaiTV4K + IPTV Dubai offers top-tier IPTV subscriptions committed to high-quality, uninterrupted service, backed by many years of experience. Our premium subscriptions start from AED 55 for English and International channels in Full HD/HD/SD/4K, along with a vast library of VOD content including top movies and TV series.
                             </p>
 
@@ -336,10 +342,10 @@ const Pricing = () => {
                                     <h3 className="text-lg font-bold text-[#001540] mb-2">
                                         Why We Stand Out
                                     </h3>
-                                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                                    <p className="text-gray-700 text-sm leading-relaxed mb-4">
                                         Experience world-class IPTV entertainment designed for viewers who expect more. Our advanced streaming technology delivers crystal-clear Ultra HD quality without compromise. Enjoy premium channels from the UK, USA, UAE, Canada, France, and many other countries — all at pricing made to fit every budget.
                                     </p>
-                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                    <p className="text-gray-700 text-sm leading-relaxed">
                                         Watch seamlessly on your Smart TV, smartphone, tablet, or streaming device anytime, anywhere.
                                     </p>
                                 </div>
@@ -358,8 +364,8 @@ const Pricing = () => {
                                             "Access to Top Sports & Premium Entertainment Networks",
                                             "4K, 8K, Full UHD & HD Picture Quality"
                                         ].map((item, index) => (
-                                            <li key={index} className="flex items-start gap-2 text-sm text-gray-600">
-                                                <span className="text-green-500 font-bold">✔</span>
+                                            <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
+                                                <span className="text-green-600 font-bold">✔</span>
                                                 <span>{item}</span>
                                             </li>
                                         ))}
@@ -374,6 +380,9 @@ const Pricing = () => {
                                 src="/images/center_man.webp"
                                 alt="UKTV4K Premium Entertainment"
                                 className="w-[75%] max-w-xs rounded-lg shadow-xl"
+                                width="320"
+                                height="320"
+                                loading="lazy"
                             />
                         </div>
                     </div>

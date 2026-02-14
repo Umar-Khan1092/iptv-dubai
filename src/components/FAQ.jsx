@@ -10,11 +10,11 @@ const FAQ = () => {
         },
         {
             question: "Which IPTV provider is best in Dubai?",
-            answer: "The ideal IPTV provider offers stable streaming, affordable plans, high-resolution 4K content, and dependable customer support. Choose a service that delivers consistent performance and transparent pricing."
+            answer: 'The ideal <a href="https://iptvdubai.fun" target="_blank" rel="noopener noreferrer" class="text-pink-500 hover:underline">iptvdubai.fun</a> offers stable streaming, affordable plans, high-resolution 4K content, and dependable customer support. Choose a service that delivers consistent performance and transparent pricing.'
         },
         {
-            question: "How can I buy an IPTV subscription in Dubai?",
-            answer: "Purchasing an IPTV subscription is simple. Select your preferred plan, contact the provider through their official channel (such as WhatsApp or website), and receive activation details quickly for instant access."
+            question: "How can I buy an <a href='https://iptvdubai.fun' target='_blank' rel='noopener noreferrer' class='text-pink-500 hover:underline'>iptvdubai.fun</a> subscription in Dubai?",
+            answer: "Purchasing an <a href='https://iptvdubai.fun' target='_blank' rel='noopener noreferrer' class='text-pink-500 hover:underline'>iptvdubai.fun</a> subscription is simple. Select your preferred plan, contact the provider through their official channel (such as WhatsApp or website), and receive activation details quickly for instant access."
         },
         {
             question: "How reliable is IPTV in Dubai?",
@@ -53,9 +53,10 @@ const FAQ = () => {
                                 onClick={() => toggleFaq(index)}
                                 className="w-full py-5 px-6 flex items-center justify-between text-left group"
                             >
-                                <span className="text-lg md:text-xl font-medium text-white group-hover:text-pink-500 transition-colors">
-                                    {item.question}
-                                </span>
+                                <span
+                                    className="text-lg md:text-xl font-medium text-white group-hover:text-pink-500 transition-colors"
+                                    dangerouslySetInnerHTML={{ __html: item.question }}
+                                />
 
                                 <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-[#E91E63] flex items-center justify-center transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
                                     <svg
@@ -80,9 +81,10 @@ const FAQ = () => {
                                     }`}
                             >
                                 <div className="overflow-hidden">
-                                    <div className="px-6 pb-6 pt-2 text-gray-400 leading-relaxed">
-                                        {item.answer}
-                                    </div>
+                                    <div
+                                        className="px-6 pb-6 pt-2 text-gray-400 leading-relaxed"
+                                        dangerouslySetInnerHTML={{ __html: item.answer }}
+                                    />
                                 </div>
                             </div>
                         </div>
