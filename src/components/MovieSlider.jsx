@@ -19,8 +19,11 @@ const MovieSlider = () => {
         <section className="bg-black py-0 overflow-hidden relative group">
             <div className="flex whitespace-nowrap overflow-hidden">
                 {/* Scrolling Container - No gaps, no padding, images are joined */}
-                <div className="flex animate-scroll hover:[animation-play-state:paused] cursor-grab active:cursor-grabbing">
-                    {[...movies, ...movies, ...movies].map((src, index) => (
+                <div
+                    className="flex animate-scroll hover:[animation-play-state:paused] cursor-grab active:cursor-grabbing"
+                    style={{ willChange: 'transform' }}
+                >
+                    {[...movies, ...movies].map((src, index) => (
                         <div
                             key={`movie-${index}`}
                             className="flex-shrink-0 relative overflow-hidden"
@@ -32,6 +35,7 @@ const MovieSlider = () => {
                                 loading="lazy"
                                 width="1200"
                                 height="400"
+                                decoding="async"
                             />
                             {/* Subtle overlay for each poster */}
                             <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors duration-300"></div>

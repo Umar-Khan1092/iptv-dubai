@@ -15,6 +15,7 @@ const Hero = () => {
                         fetchPriority="high"
                         width="1920"
                         height="1080"
+                        decoding="async"
                     />
                 </div>
 
@@ -87,7 +88,7 @@ const Hero = () => {
                     <div className="flex flex-col items-center group cursor-pointer transition-transform duration-300 hover:scale-105">
                         <div className="relative mb-8">
                             <div className="w-24 h-24 bg-white rotate-45 shadow-sm flex items-center justify-center border border-gray-100 overflow-hidden transition-all duration-300">
-                                <img src="/images/first_icon.webp" alt="Premium Channels" className="-rotate-45 w-full h-full object-cover scale-[2.0]" width="96" height="96" />
+                                <img src="/images/first_icon.webp" alt="Premium Channels" className="-rotate-45 w-full h-full object-cover scale-[2.0]" width="96" height="96" decoding="async" />
                             </div>
                         </div>
                         <h2 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">Global Channels</h2>
@@ -100,7 +101,7 @@ const Hero = () => {
                     <div className="flex flex-col items-center group cursor-pointer transition-transform duration-300 hover:scale-105">
                         <div className="relative mb-8">
                             <div className="w-24 h-24 bg-white rotate-45 shadow-sm flex items-center justify-center border border-gray-100 overflow-hidden transition-all duration-300">
-                                <img src="/images/third_icon.webp" alt="100% Satisfaction" className="-rotate-45 w-full h-full object-cover scale-[1.5]" width="96" height="96" />
+                                <img src="/images/third_icon.webp" alt="100% Satisfaction" className="-rotate-45 w-full h-full object-cover scale-[1.5]" width="96" height="96" decoding="async" />
                             </div>
                         </div>
                         <h2 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">Flexible Plans</h2>
@@ -112,7 +113,7 @@ const Hero = () => {
                     <div className="flex flex-col items-center group cursor-pointer transition-transform duration-300 hover:scale-105">
                         <div className="relative mb-8">
                             <div className="w-24 h-24 bg-white rotate-45 shadow-sm flex items-center justify-center border border-gray-100 overflow-hidden transition-all duration-300">
-                                <img src="/images/fourth_icon.webp" alt="24/7 Support" className="-rotate-45 w-full h-full object-cover scale-[1.5]" width="96" height="96" />
+                                <img src="/images/fourth_icon.webp" alt="24/7 Support" className="-rotate-45 w-full h-full object-cover scale-[1.5]" width="96" height="96" decoding="async" />
                             </div>
                         </div>
                         <h2 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">24/7 Support</h2>
@@ -125,7 +126,7 @@ const Hero = () => {
                     <div className="flex flex-col items-center group cursor-pointer transition-transform duration-300 hover:scale-105">
                         <div className="relative mb-8">
                             <div className="w-24 h-24 bg-white rotate-45 shadow-sm flex items-center justify-center border border-gray-100 overflow-hidden transition-all duration-300">
-                                <img src="/images/second_icon.webp" alt="4K Quality" className="-rotate-45 w-full h-full object-cover scale-[1.5]" width="96" height="96" />
+                                <img src="/images/second_icon.webp" alt="4K Quality" className="-rotate-45 w-full h-full object-cover scale-[1.5]" width="96" height="96" decoding="async" />
                             </div>
                         </div>
                         <h2 className="text-[#001540] group-hover:text-[#D71921] font-black text-xl mb-4 font-heading tracking-widest uppercase transition-colors duration-300">4K/8K Ultra</h2>

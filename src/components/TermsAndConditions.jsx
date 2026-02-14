@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import SEO from './SEO';
 
 const TermsAndConditions = () => {
 
@@ -10,6 +11,10 @@ const TermsAndConditions = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 flex flex-col font-sans">
+            <SEO
+                title="Privacy Policy & Refund Policy - Dubai TV 4K"
+                description="Read the Privacy Policy and Refund Policy for Dubai TV 4K IPTV services in Dubai, UAE."
+            />
             <Header />
             <main className="flex-grow container mx-auto px-6 py-12 max-w-4xl">
                 <h1 className="text-3xl font-black text-[#001540] mb-8 font-heading uppercase">Privacy Policy</h1>

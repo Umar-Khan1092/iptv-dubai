@@ -1,4 +1,71 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, memo } from 'react';
+
+const PricingCard = memo(({ plan, features }) => (
+    <div
+        className={`relative rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${plan.featured
+            ? 'bg-gradient-to-br from-[#00cc00] to-[#006600] shadow-xl shadow-green-500/50 border-2 border-green-400'
+            : 'bg-[#002613] border-2 border-green-900 hover:border-[#D71921]'
+            }`}
+    >
+        {plan.featured && (
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-[#D71921] text-white px-6 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg whitespace-nowrap">
+                    Most Popular
+                </span>
+            </div>
+        )}
+
+        <div className="text-center mb-6">
+            <h3 className={`text-sm font-black uppercase tracking-[0.2em] mb-4 ${plan.featured ? 'text-white' : 'text-gray-400'
+                }`}>
+                {plan.title}
+            </h3>
+            <div className="mb-2">
+                <span className={`text-5xl font-black ${plan.featured ? 'text-white' : 'text-white'
+                    }`}>
+                    AED{plan.price}
+                </span>
+            </div>
+            <p className={`text-sm ${plan.featured ? 'text-white/90' : 'text-gray-400'
+                }`}>
+                {plan.period}
+            </p>
+        </div>
+
+        <ul className="space-y-3 mb-8">
+            {features.map((feature, index) => (
+                <li key={index} className="flex items-start gap-3">
+                    <span className="text-lg flex-shrink-0">{feature.icon}</span>
+                    <span className={`text-sm font-medium ${plan.featured ? 'text-white' : 'text-gray-300'
+                        }`}>
+                        {feature.text}
+                    </span>
+                </li>
+            ))}
+        </ul>
+
+        <button
+            onClick={() => window.open('https://wa.me/447311128276', '_blank')}
+            className={`w-full py-4 rounded-xl font-black uppercase tracking-wider text-sm transition-all duration-300 ${plan.featured
+                ? 'bg-white text-[#006600] hover:bg-gray-100 shadow-lg'
+                : 'bg-[#003d1e] text-white hover:bg-[#D71921] border border-green-800 hover:border-[#D71921]'
+                }`}
+        >
+            Get Started
+        </button>
+    </div>
+));
+
+const StatItem = memo(({ count, label }) => (
+    <div className="text-center md:text-left">
+        <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#001540] mb-1">
+            +{count.toLocaleString()}
+        </div>
+        <div className="text-[10px] md:text-xs font-medium text-gray-700 uppercase tracking-wide">
+            {label}
+        </div>
+    </div>
+));
 
 const Pricing = () => {
     // Counter animation states
@@ -138,68 +205,7 @@ const Pricing = () => {
                     {/* Pricing Cards Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {plans.map((plan) => (
-                            <div
-                                key={plan.id}
-                                className={`relative rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${plan.featured
-                                    ? 'bg-gradient-to-br from-[#00cc00] to-[#006600] shadow-xl shadow-green-500/50 border-2 border-green-400'
-                                    : 'bg-[#002613] border-2 border-green-900 hover:border-[#D71921]'
-                                    }`}
-                            >
-                                {/* Popular Badge */}
-                                {plan.featured && (
-                                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                                        <span className="bg-[#D71921] text-white px-6 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg whitespace-nowrap">
-                                            Most Popular
-                                        </span>
-                                    </div>
-                                )}
-
-                                {/* Plan Title */}
-                                <div className="text-center mb-6">
-                                    <h3 className={`text-sm font-black uppercase tracking-[0.2em] mb-4 ${plan.featured ? 'text-white' : 'text-gray-400'
-                                        }`}>
-                                        {plan.title}
-                                    </h3>
-
-                                    {/* Price */}
-                                    <div className="mb-2">
-                                        <span className={`text-5xl font-black ${plan.featured ? 'text-white' : 'text-white'
-                                            }`}>
-                                            AED{plan.price}
-                                        </span>
-                                    </div>
-                                    <p className={`text-sm ${plan.featured ? 'text-white/90' : 'text-gray-400'
-                                        }`}>
-                                        {plan.period}
-                                    </p>
-                                </div>
-
-                                {/* Features List */}
-                                <ul className="space-y-3 mb-8">
-                                    {features.map((feature, index) => (
-                                        <li key={index} className="flex items-start gap-3">
-                                            <span className="text-lg flex-shrink-0">{feature.icon}</span>
-                                            <span className={`text-sm font-medium ${plan.featured ? 'text-white' : 'text-gray-300'
-                                                }`}>
-                                                {feature.text}
-                                            </span>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                {/* CTA Button */}
-                                <button
-                                    onClick={() => {
-                                        window.open('https://wa.me/447311128276', '_blank');
-                                    }}
-                                    className={`w-full py-4 rounded-xl font-black uppercase tracking-wider text-sm transition-all duration-300 ${plan.featured
-                                        ? 'bg-white text-[#006600] hover:bg-gray-100 shadow-lg'
-                                        : 'bg-[#003d1e] text-white hover:bg-[#D71921] border border-green-800 hover:border-[#D71921]'
-                                        }`}
-                                >
-                                    Get Started
-                                </button>
-                            </div>
+                            <PricingCard key={plan.id} plan={plan} features={features} />
                         ))}
                     </div>
 
@@ -241,6 +247,7 @@ const Pricing = () => {
                                         width="144"
                                         height="144"
                                         loading="lazy"
+                                        decoding="async"
                                     />
                                 </div>
 
@@ -272,6 +279,7 @@ const Pricing = () => {
                                 width="448"
                                 height="448"
                                 loading="lazy"
+                                decoding="async"
                             />
                         </div>
 
@@ -289,35 +297,9 @@ const Pricing = () => {
 
                             {/* Statistics */}
                             <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                {/* Stat 1 */}
-                                <div className="text-center md:text-left">
-                                    <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#001540] mb-1">
-                                        +{counters.channels.toLocaleString()}
-                                    </div>
-                                    <div className="text-[10px] md:text-xs font-medium text-gray-600 uppercase tracking-wide">
-                                        4K UHD DUBAI/US CHANNELS
-                                    </div>
-                                </div>
-
-                                {/* Stat 2 */}
-                                <div className="text-center md:text-left">
-                                    <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#001540] mb-1">
-                                        +{counters.worldwide.toLocaleString()}
-                                    </div>
-                                    <div className="text-[10px] md:text-xs font-medium text-gray-600 uppercase tracking-wide">
-                                        WORLDWIDE CHANNELS
-                                    </div>
-                                </div>
-
-                                {/* Stat 3 */}
-                                <div className="text-center md:text-left">
-                                    <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#001540] mb-1">
-                                        +{counters.vod.toLocaleString()}
-                                    </div>
-                                    <div className="text-[10px] md:text-xs font-medium text-gray-600 uppercase tracking-wide">
-                                        LATEST VOD TITLES AVAILABLE
-                                    </div>
-                                </div>
+                                <StatItem count={counters.channels} label="4K UHD DUBAI/US CHANNELS" />
+                                <StatItem count={counters.worldwide} label="WORLDWIDE CHANNELS" />
+                                <StatItem count={counters.vod} label="LATEST VOD TITLES AVAILABLE" />
                             </div>
                         </div>
                     </div>
@@ -383,6 +365,7 @@ const Pricing = () => {
                                 width="320"
                                 height="320"
                                 loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     </div>

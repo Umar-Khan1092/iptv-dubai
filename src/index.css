@@ -30,6 +30,11 @@ body {
   h6 {
     @apply uppercase font-bold;
   }
+
+  section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 1000px;
+  }
 }
 
 /* Custom Animations */
@@ -55,7 +60,7 @@ body {
   }
 
   100% {
-    transform: translateX(-33.3333%);
+    transform: translateX(-50%);
   }
 }
 
