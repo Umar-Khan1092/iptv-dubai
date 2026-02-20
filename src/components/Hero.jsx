@@ -29,7 +29,7 @@ const Hero = () => {
 
                         {/* Description */}
                         <p className="text-gray-200 font-bold text-sm md:text-base uppercase tracking-[0.15em] leading-relaxed max-w-lg mb-12 border-l-4 border-[#D71921] pl-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
-                            Experience premium IPTV in Dubai with access to 55,000+ live channels and over 100,000 movies and series in ultra-high definition. Enjoy international news, live sports, and exclusive entertainment with fast, reliable streaming on Smart TVs, smartphones, and all major devices. Upgrade your TV experience with a powerful IPTV subscription designed for viewers in Dubai.
+                            Get the best IPTV subscription in Dubai with 55,000+ live channels and 100,000+ movies and series in HD and 4K quality. Enjoy fast, reliable IPTV streaming on Smart TVs, mobile, and all devices anywhere in Dubai.
                         </p>
 
                         {/* CTA Buttons */}
